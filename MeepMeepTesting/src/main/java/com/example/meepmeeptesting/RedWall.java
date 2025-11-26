@@ -1,11 +1,12 @@
 package com.example.meepmeeptesting;
 
 import com.acmerobotics.roadrunner.Pose2d;
+import com.acmerobotics.roadrunner.Vector2d;
 import com.noahbres.meepmeep.MeepMeep;
 import com.noahbres.meepmeep.roadrunner.DefaultBotBuilder;
 import com.noahbres.meepmeep.roadrunner.entity.RoadRunnerBotEntity;
 
-public class MeepMeepTesting {
+public class RedWall {
     public static void main(String[] args) {
         MeepMeep meepMeep = new MeepMeep(800);
 
@@ -14,18 +15,17 @@ public class MeepMeepTesting {
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
                 .build();
 
-        myBot.runAction(myBot.getDrive().actionBuilder(new Pose2d(-34, -34, 0))
-                .lineToX(38)
-                .turn(Math.toRadians(90))
-                .lineToY(38)
-                .turn(Math.toRadians(90))
-                .lineToX(-34)
-                .turn(Math.toRadians(90))
-                .lineToY(-34)
-                .turn(Math.toRadians(90))
+        myBot.runAction(myBot.getDrive().actionBuilder(new Pose2d(22, -63, 1.5708))
+                .splineTo(new Vector2d(-12, 12), Math.toRadians(135))
+                .waitSeconds(5)
+                .strafeToSplineHeading(new Vector2d(11.5, -31), Math.toRadians(270))
+                .waitSeconds(1)
+                .lineToY(-44)
+                .strafeToSplineHeading(new Vector2d(-12, 12), Math.toRadians(135))
+                .waitSeconds(5)
                 .build());
 
-        meepMeep.setBackground(MeepMeep.Background.FIELD_POWERPLAY_OFFICIAL)
+        meepMeep.setBackground(MeepMeep.Background.FIELD_DECODE_OFFICIAL)
                 .setDarkMode(true)
                 .setBackgroundAlpha(0.95f)
                 .addEntity(myBot)
