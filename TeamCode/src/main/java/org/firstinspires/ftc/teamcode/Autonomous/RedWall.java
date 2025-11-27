@@ -81,7 +81,7 @@ public class RedWall extends LinearOpMode {
         LShooter.setDirection(DcMotorSimple.Direction.FORWARD);
         RShooter.setDirection(DcMotorSimple.Direction.REVERSE);
 
-        Pose2d beginPose = new Pose2d(new Vector2d(22, -63), Math.toRadians(1.5708));
+        Pose2d beginPose = new Pose2d(new Vector2d(60.5, -11.5), Math.toRadians(180));
 
         MecanumDrive drive = new MecanumDrive(hardwareMap, beginPose);
 

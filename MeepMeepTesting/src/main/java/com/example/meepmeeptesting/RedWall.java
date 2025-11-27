@@ -15,7 +15,7 @@ public class RedWall {
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
                 .build();
 
-        myBot.runAction(myBot.getDrive().actionBuilder(new Pose2d(22, -63, 1.5708))
+        myBot.runAction(myBot.getDrive().actionBuilder(new Pose2d(63, -11.5, 3.14159))
                 .splineTo(new Vector2d(-12, 12), Math.toRadians(135))
                 .waitSeconds(5)
                 .strafeToSplineHeading(new Vector2d(11.5, -31), Math.toRadians(270))
