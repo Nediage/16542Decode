@@ -64,8 +64,10 @@ public class RedWall extends LinearOpMode {
         public void run() {
             if (wheelOn) {
                 intake.setPower(1.0);
+                belt.setPower(0.5);
             } else if (!wheelOn) {
                 intake.setPower(0.0);
+                belt.setPower(0.0);
             }
         }
     }
