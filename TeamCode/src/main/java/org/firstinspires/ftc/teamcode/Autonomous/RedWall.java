@@ -15,7 +15,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 
 import org.firstinspires.ftc.teamcode.MecanumDrive;
 
-@Autonomous(name="BlueWall")
+@Autonomous(name="RedWall")
 public class RedWall extends LinearOpMode {
     Servo trigger;
     DcMotor belt;
@@ -73,9 +73,9 @@ public class RedWall extends LinearOpMode {
     }
     @Override
     public void runOpMode() throws InterruptedException {
-        trigger = hardwareMap.get(Servo.class, "trigger");
-        belt = hardwareMap.get(DcMotor.class, "belt");
-        intake = hardwareMap.get(DcMotor.class, "intake");
+        trigger = hardwareMap.get(Servo.class, "Trigger");
+        belt = hardwareMap.get(DcMotor.class, "Belt");
+        intake = hardwareMap.get(DcMotor.class, "Intake");
         LShooter = hardwareMap.get(DcMotor.class, "LShooter");
         RShooter = hardwareMap.get(DcMotor.class, "RShooter");
 
