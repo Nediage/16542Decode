@@ -16,7 +16,7 @@ public class BlueWall {
                 .build();
 
         myBot.runAction(myBot.getDrive().actionBuilder(new Pose2d(60.5, 11.5, 3.14159))
-                .splineTo(new Vector2d(-12, -12), Math.toRadians(225))
+                .splineTo(new Vector2d(-12, -12), Math.toRadians(45))
                 .waitSeconds(5)
                 .strafeToSplineHeading(new Vector2d(11.5, 31), Math.toRadians(90))
                 .waitSeconds(1)

@@ -34,7 +34,7 @@ public class BlueWall extends LinearOpMode {
         public void run() {
             trigger.setPosition(targetPosition);
             sleep(500);
-            trigger.setPosition(0);
+            trigger.setPosition(0.7);
             belt.setPower(0.8);
             sleep(1000);
             belt.setPower(0.0);
@@ -94,7 +94,7 @@ public class BlueWall extends LinearOpMode {
 
         Action path = drive.actionBuilder(beginPose)
                 .splineTo(new Vector2d(-12, -12), Math.toRadians(225))
-                .stopAndAdd(new Shoot(5))
+                .stopAndAdd(new Shoot(0))
                 .strafeToSplineHeading(new Vector2d(11.5, 31), Math.toRadians(90))
                 .stopAndAdd(new Intake(true))
                 .waitSeconds(1)
